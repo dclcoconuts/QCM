@@ -40,3 +40,15 @@
     background-color :#162d50ff;
     border-color : #162d50ff;
 }
+
+.dropdown-menu{
+    text-align : center;
+    font-size : 1.2em;
+    padding-top : 15px;
+    padding-bottom: 15px;
+    color: green;
+}
+
+.logout{
+    display: none;
+}

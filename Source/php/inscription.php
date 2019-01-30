@@ -7,8 +7,9 @@
 $firstname = $_POST['firstname'];
 $usrname = $_POST['usrname'];
 $email_inscrip = $_POST['email_inscrip'];
-$psw1 = $_POST['psw1'];
 
+// Hachage du mot de passe
+$psw1 = password_hash($_POST['psw1'], PASSWORD_DEFAULT);
 
 // connexion pdo à la base de données
 // utilisation d'un fichier Json pour récupérer les informations de connexion

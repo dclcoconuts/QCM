@@ -1,8 +1,15 @@
 // fonctions Jquery et Ajax
 
 $(document).ready(function(){
+
     // pour afficher la fenetre modale d'inscription
     $("#inscript").click(function(){
+        // pour vider les champs
+        $("#usrname").val(""); 
+        $("#firstname").val("");  
+        $("#email_inscrip").val("");  
+        $("#password1").val("");  
+        $("#password2").val("");          
         $("#modalInscrip").modal();
     });
 
@@ -13,14 +20,49 @@ $(document).ready(function(){
     });
 
     // pour afficher la fenetre modale de login
-    $("#login").click(function(){
+    $("#login").click(function(){  
+        $("#email_log").val(""); 
+        $("#psw_log").val("");             
         $("#modalLogin").modal();
     });
 
     // pour afficher la fenetre modale de mot de passe oublié
     $("#pass").click(function(){
         $("#modalLogin").modal("hide");
-        $("#modalPass").modal();
+        $("#email_forgot").val("");  
+        $("#modalPass").modal("show");
+    });
+
+    // pour gérer la deconnexion
+    $(".deconnection").click(function(){
+        $("#logout").modal("show");      
+        $("#navbar_connect").css('display','none');
+        $("#navbar_admin").css('display','none');
+        $("#navbar_invite").css('display','block');
+    });
+   
+    // pour gérer mot de passe oublié
+    $("#submit_forgot").click(function(e){
+        // alert("OK")
+        e.preventDefault();
+        $.post(
+            'php/pwd_forgot.php',
+        {
+             email_forgot : $("#email_forgot").val(),
+        },
+        function(data){
+            if(data == 'Invalid'){ 
+                $("#error_msg2").css('color','red'); 
+                $("#error_msg2").html("<p>Votre email n'est pas reconnu.</p>");
+                $("#modalPass").modal("show");
+            }  
+            else{
+                $("#modalPass").modal("hide"); 
+                $("#mail_psw").modal("show");                 
+            }   
+        },
+        'text'
+        );   
     });
 
     // pour valider le login
@@ -36,9 +78,27 @@ $(document).ready(function(){
         function(data){
             if(data != 'Invalid'){ 
                 $("#modalLogin").modal("hide");
-                $("#navbar_connect").toggle();
-                $("#navbar_invite").toggle();
-                $("#user").html(data);
+                $("#navbar_invite").css('display','none');
+                // pour découper la réponse 
+                tab = data.split("/");
+
+                // affiche le role de l'utilisateur (1=Utilisateur, 2=Administrateur)
+                if (tab[2] == "1")
+                { 
+                    // affiche le nom de l'utilisateur dans le menu
+                    $("#user1").html(tab[0]+" "+tab[1]);
+                    $("#role1").html("Utilisateur");  
+                    $("#navbar_admin").css('display','none');
+                    $("#navbar_connect").css('display','block');   
+                }
+                else if (tab[2] == "2")
+                {
+                    // affiche le nom de l'utilisateur dans le menu
+                    $("#user2").html(tab[0]+" "+tab[1]);
+                    $("#role2").html("Administrateur");
+                    $("#navbar_connect").css('display','none');
+                    $("#navbar_admin").css('display','block');
+                }
 
             }else{  
                 $("#error_msg").css('color','red'); 
@@ -47,12 +107,10 @@ $(document).ready(function(){
             }       
         },
         'text'
-        ); 
-    
+        );   
     });
 
-    // pour valider l'inscription
-   
+    // pour valider l'inscription  
     $("#submit_inscrip").click(function(e){
         // alert("OK")
         e.preventDefault();
@@ -88,6 +146,7 @@ $(document).ready(function(){
                 function(data){
                     if(data != 'Invalid'){ 
                         $("#modalInscrip").modal("hide");
+                        $("#mail_inscrip").modal("show"); 
 
                     }else{  
                         $("#error_msg1").css('color','red'); 

@@ -36,11 +36,13 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li id="user"></li>
+            <li id="user1"></li>
+            <li id="role1"></li>
+            <li></li>
             <li><a href="#">Créer un QCM</a></li>
             <li><a href="#">Modifier un QCM</a></li>
             <li><a href="#">Gérer mes QCMs</a></li>
-            <li><a href="#">Déconnexion</a></li>           
+            <li><a href="#" class="deconnection">Déconnexion</a></li>           
           </ul>
         </li>
       </ul>
@@ -51,25 +53,26 @@
 <nav id="navbar_admin" class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_connect">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_admin">
         <span class="glyphicon glyphicon-user"></span>  
       </button>
       <a class="navbar-brand" href="#">QCM</a>
     </div>
-    <div class="collapse navbar-collapse" id="menu_connect">
+    <div class="collapse navbar-collapse" id="menu_admin">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">          
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
             <span class="glyphicon glyphicon-user"></span>
             <span class="caret"></span>
-          </a>
+          </a> 
           <ul class="dropdown-menu">
-            <li id="user"></li>
+            <li id="user2"></li>
+            <li id="role2"></li>
             <li><a href="#">Créer un QCM</a></li>
             <li><a href="#">Modifier un QCM</a></li>
             <li><a href="#">Gérer mes QCMs</a></li>
-            <li><a href="#">Administration des QCMs</a></li>           
-            <li><a href="#">Déconnexion</a></li>           
+            <li><a href="#">Admin des QCMs</a></li>           
+            <li><a href="#" class="deconnection">Déconnexion</a></li>           
           </ul>
         </li>
       </ul>
@@ -158,8 +161,6 @@
                 </div>
                 <div class="modal-footer">
                 <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                <p>Vous aller recevoir un email pour</p>
-                <p>confirmer votre inscription</p>
                 </div>
             </div>
             </div>
@@ -182,21 +183,82 @@
                 <form role="form">
                     <div class="form-group">
                     <label for="email"><span class="glyphicon glyphicon-user"></span> Entrer votre mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="Entrer votre mail" required>
+                    <input type="email" class="form-control" id="email_forgot" placeholder="Entrer votre mail" required>
                     </div>
-                    <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Envoyer votre demande</button>
+                    <div id="error_msg2">
+                        <p></p>
+                    </div>
+                    <button type="submit" id="submit_forgot" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Envoyer votre demande</button>
                 </form>
                 </div>
                 <div class="modal-footer">
                 <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                <p>Vous aller recevoir un email pour</p>
-                <p>retrouver votre mot de passe</p>
                 </div>
             </div>
             </div>
         </div>
         </div> 
 
+        <!-- Fenêtre Modal pour logout -->
+        <div class="modal fade" id="logout" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Vous allez être déconnecté !</h4>
+              </div>
+              <div class="modal-body">
+                <p>Merci de votre visite</p>
+                <p>A bientôt.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fenêtre Modal pour password oublié -->
+        <div class="modal fade" id="mail_psw" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Mot de passe oublié</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Vous aller recevoir un email pour</p>
+                    <p>retrouver votre mot de passe</p>
+                    <p>Merci de votre visite</p>
+                    <p>A bientôt.</p>
+                  </div>
+                  <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>        
+
+        <!-- Fenêtre Modal pour confirmer inscription -->
+        <div class="modal fade" id="mail_inscrip" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Demande d'inscription</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Vous aller recevoir un email pour</p>
+                    <p>confirmer votre inscription</p>
+                    <p>Merci de votre visite</p>
+                    <p>A bientôt.</p>
+                  </div>
+                  <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>   
 
 <script>
 
