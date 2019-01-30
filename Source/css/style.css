@@ -1,0 +1,38 @@
+
+
+/* CSS pour fenetre modale de connexion */
+
+.modal-header, h4, .close {
+    background-color: #162d50ff;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
+.navbar-header {
+    background-color: #162d50ff;
+}
+
+.navbar{
+    background-color: #162d50ff;   
+}
+
+#navbar_connect{
+    display: none;
+}
+
+.glyphicon{
+    color: #9d9d9d;
+    /* background-color: #162d50ff;  */
+    margin : 4px; 
+    line-height: 2;   
+}
+
+.btn-success{
+    background-color :#162d50ff;
+    border-color : #162d50ff;
+}

@@ -1,0 +1,9 @@
+Utilisateur (id_Utilisateur, nom_Utilisateur, prenom_Utilisateur, dateInscript_Utilisateur, status_Utilisateur)  
+
+Categorie (id_Categorie, nom_Categorie)  
+
+Questionnaire (id_Questionnaire, nom_Questionnaire, date_Questionnaire, status_Questionnaire, motifRefus_Questionnaire, #id_Utilisateur, #id_Categorie)  
+
+Question (id_Question, libelle_Question, proposition_Question, reponse_Question, #id_Questionnaire)  
+
+Noter (id_Noter, note_Noter, #id_Utilisateur, #id_Questionnaire) 

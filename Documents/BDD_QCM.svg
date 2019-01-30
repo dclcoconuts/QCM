@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+PUBLIC "-//W3C//DTD SVG 1.1//EN"
+       "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="50 41 1012 598" width="962px" height="557px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="402" y1="146" x2="392" y2="146" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="407" y1="286" x2="417" y2="286" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="392" y1="146" x2="407" y2="286" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="394.5" y1="146" x2="398.03553390593" y2="149.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="394.5" y1="146" x2="398.03553390593" y2="142.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="412" y1="286" x2="408.46446609407" y2="289.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="412" y1="286" x2="408.46446609407" y2="282.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="402" y1="126" x2="392" y2="126" style="stroke:#333;stroke-width:1;"/>
+   <line x1="245" y1="246" x2="235" y2="246" style="stroke:#333;stroke-width:1;"/>
+   <line x1="392" y1="126" x2="245" y2="246" style="stroke:#333;stroke-width:1;"/>
+   <line x1="394.5" y1="126" x2="398.03553390593" y2="129.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="394.5" y1="126" x2="398.03553390593" y2="122.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="240" y1="246" x2="243.53553390593" y2="249.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="240" y1="246" x2="243.53553390593" y2="242.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="839" y1="396" x2="829" y2="396" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="619" y1="286" x2="609" y2="286" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="829" y1="396" x2="619" y2="286" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="831.5" y1="396" x2="835.03553390593" y2="399.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="831.5" y1="396" x2="835.03553390593" y2="392.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="614" y1="286" x2="617.53553390593" y2="289.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="614" y1="286" x2="617.53553390593" y2="282.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="417" y1="406" x2="407" y2="406" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="371" y1="553" x2="381" y2="553" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="407" y1="406" x2="371" y2="553" style="stroke:#0b0;stroke-width:1;"/>
+   <line x1="409.5" y1="406" x2="413.03553390593" y2="409.53553390593" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="409.5" y1="406" x2="413.03553390593" y2="402.46446609407" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="376" y1="553" x2="372.46446609407" y2="556.53553390593" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="376" y1="553" x2="372.46446609407" y2="549.46446609407" style="stroke:#0b0;stroke-width:2;"/>
+   <line x1="417" y1="386" x2="407" y2="386" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="245" y1="246" x2="235" y2="246" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="407" y1="386" x2="245" y2="246" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="409.5" y1="386" x2="413.03553390593" y2="389.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="409.5" y1="386" x2="413.03553390593" y2="382.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="240" y1="246" x2="243.53553390593" y2="249.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="240" y1="246" x2="243.53553390593" y2="242.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="839" y1="213" x2="829" y2="213" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="829" y1="356" x2="839" y2="356" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="829" y1="213" x2="829" y2="356" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="831.5" y1="213" x2="835.03553390593" y2="216.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="831.5" y1="213" x2="835.03553390593" y2="209.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="834" y1="356" x2="830.46446609407" y2="359.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="834" y1="356" x2="830.46446609407" y2="352.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <rect width="116" height="20" x="381" y="523" style="fill:#007;stroke:black;"/>
+   <text width="116" height="20" x="386" y="537" style="fill:#fff;" font-family="Arial" font-size="16px"> Categorie</text>
+   <rect width="116" height="20" x="381" y="543" style="fill:#aea;stroke:black;"/>
+   <text width="116" height="20" x="386" y="557" style="fill:black;" font-family="Arial" font-size="16px">id_Categorie</text>
+   <rect width="116" height="20" x="381" y="563" style="fill:none;stroke:black;"/>
+   <text width="116" height="20" x="386" y="577" style="fill:black;" font-family="Arial" font-size="16px">nom_Categorie</text>
+   <rect width="127" height="20" x="402" y="56" style="fill:#007;stroke:black;"/>
+   <text width="127" height="20" x="407" y="70" style="fill:#fff;" font-family="Arial" font-size="16px"> Noter</text>
+   <rect width="127" height="20" x="402" y="76" style="fill:#aea;stroke:black;"/>
+   <text width="127" height="20" x="407" y="90" style="fill:black;" font-family="Arial" font-size="16px">id_Noter</text>
+   <rect width="127" height="20" x="402" y="96" style="fill:none;stroke:black;"/>
+   <text width="127" height="20" x="407" y="110" style="fill:black;" font-family="Arial" font-size="16px">note_Noter</text>
+   <rect width="127" height="20" x="402" y="116" style="fill:none;stroke:black;"/>
+   <text width="127" height="20" x="407" y="130" style="fill:black;" font-family="Arial" font-size="16px">id_Utilisateur</text>
+   <rect width="127" height="20" x="402" y="136" style="fill:none;stroke:black;"/>
+   <text width="127" height="20" x="407" y="150" style="fill:black;" font-family="Arial" font-size="16px">id_Questionnaire</text>
+   <rect width="127" height="20" x="839" y="326" style="fill:#007;stroke:black;"/>
+   <text width="127" height="20" x="844" y="340" style="fill:#fff;" font-family="Arial" font-size="16px"> Question</text>
+   <rect width="127" height="20" x="839" y="346" style="fill:#aea;stroke:black;"/>
+   <text width="127" height="20" x="844" y="360" style="fill:black;" font-family="Arial" font-size="16px">id_Question</text>
+   <rect width="127" height="20" x="839" y="366" style="fill:none;stroke:black;"/>
+   <text width="127" height="20" x="844" y="380" style="fill:black;" font-family="Arial" font-size="16px">libelle_Question</text>
+   <rect width="127" height="20" x="839" y="386" style="fill:none;stroke:black;"/>
+   <text width="127" height="20" x="844" y="400" style="fill:black;" font-family="Arial" font-size="16px">id_Questionnaire</text>
+   <rect width="192" height="20" x="417" y="256" style="fill:#007;stroke:black;"/>
+   <text width="192" height="20" x="422" y="270" style="fill:#fff;" font-family="Arial" font-size="16px"> Questionnaire</text>
+   <rect width="192" height="20" x="417" y="276" style="fill:#aea;stroke:black;"/>
+   <text width="192" height="20" x="422" y="290" style="fill:black;" font-family="Arial" font-size="16px">id_Questionnaire</text>
+   <rect width="192" height="20" x="417" y="296" style="fill:none;stroke:black;"/>
+   <text width="192" height="20" x="422" y="310" style="fill:black;" font-family="Arial" font-size="16px">nom_Questionnaire</text>
+   <rect width="192" height="20" x="417" y="316" style="fill:none;stroke:black;"/>
+   <text width="192" height="20" x="422" y="330" style="fill:black;" font-family="Arial" font-size="16px">date_Questionnaire</text>
+   <rect width="192" height="20" x="417" y="336" style="fill:none;stroke:black;"/>
+   <text width="192" height="20" x="422" y="350" style="fill:black;" font-family="Arial" font-size="16px">status_Questionnaire</text>
+   <rect width="192" height="20" x="417" y="356" style="fill:none;stroke:black;"/>
+   <text width="192" height="20" x="422" y="370" style="fill:black;" font-family="Arial" font-size="16px">motifRefus_Questionnaire</text>
+   <rect width="192" height="20" x="417" y="376" style="fill:none;stroke:black;"/>
+   <text width="192" height="20" x="422" y="390" style="fill:black;" font-family="Arial" font-size="16px">id_Utilisateur</text>
+   <rect width="192" height="20" x="417" y="396" style="fill:none;stroke:black;"/>
+   <text width="192" height="20" x="422" y="410" style="fill:black;" font-family="Arial" font-size="16px">id_Categorie</text>
+   <rect width="158" height="20" x="839" y="123" style="fill:#007;stroke:black;"/>
+   <text width="158" height="20" x="844" y="137" style="fill:#fff;" font-family="Arial" font-size="16px"> Reponse</text>
+   <rect width="158" height="20" x="839" y="143" style="fill:#aea;stroke:black;"/>
+   <text width="158" height="20" x="844" y="157" style="fill:black;" font-family="Arial" font-size="16px">id_Reponse</text>
+   <rect width="158" height="20" x="839" y="163" style="fill:none;stroke:black;"/>
+   <text width="158" height="20" x="844" y="177" style="fill:black;" font-family="Arial" font-size="16px">proposition_Reponse</text>
+   <rect width="158" height="20" x="839" y="183" style="fill:none;stroke:black;"/>
+   <text width="158" height="20" x="844" y="197" style="fill:black;" font-family="Arial" font-size="16px">reponse_Reponse</text>
+   <rect width="158" height="20" x="839" y="203" style="fill:none;stroke:black;"/>
+   <text width="158" height="20" x="844" y="217" style="fill:black;" font-family="Arial" font-size="16px">id_Question</text>
+   <rect width="170" height="20" x="65" y="216" style="fill:#007;stroke:black;"/>
+   <text width="170" height="20" x="70" y="230" style="fill:#fff;" font-family="Arial" font-size="16px"> Utilisateur</text>
+   <rect width="170" height="20" x="65" y="236" style="fill:#aea;stroke:black;"/>
+   <text width="170" height="20" x="70" y="250" style="fill:black;" font-family="Arial" font-size="16px">id_Utilisateur</text>
+   <rect width="170" height="20" x="65" y="256" style="fill:none;stroke:black;"/>
+   <text width="170" height="20" x="70" y="270" style="fill:black;" font-family="Arial" font-size="16px">nom_Utilisateur</text>
+   <rect width="170" height="20" x="65" y="276" style="fill:none;stroke:black;"/>
+   <text width="170" height="20" x="70" y="290" style="fill:black;" font-family="Arial" font-size="16px">prenom_Utilisateur</text>
+   <rect width="170" height="20" x="65" y="296" style="fill:none;stroke:black;"/>
+   <text width="170" height="20" x="70" y="310" style="fill:black;" font-family="Arial" font-size="16px">dateInscript_Utilisateur</text>
+   <rect width="170" height="20" x="65" y="316" style="fill:none;stroke:black;"/>
+   <text width="170" height="20" x="70" y="330" style="fill:black;" font-family="Arial" font-size="16px">status_Utilisateur</text>
+</svg>
