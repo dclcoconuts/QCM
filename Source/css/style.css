@@ -25,6 +25,10 @@
     display: none;
 }
 
+#navbar_admin{
+    display: none;
+}
+
 .glyphicon{
     color: #9d9d9d;
     /* background-color: #162d50ff;  */

@@ -48,6 +48,34 @@
   </div>
 </nav>
 
+<nav id="navbar_admin" class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_connect">
+        <span class="glyphicon glyphicon-user"></span>  
+      </button>
+      <a class="navbar-brand" href="#">QCM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="menu_connect">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">          
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-user"></span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li id="user"></li>
+            <li><a href="#">Créer un QCM</a></li>
+            <li><a href="#">Modifier un QCM</a></li>
+            <li><a href="#">Gérer mes QCMs</a></li>
+            <li><a href="#">Administration des QCMs</a></li>           
+            <li><a href="#">Déconnexion</a></li>           
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
        <!--  fenetre modale de connexion -->
        <div class="connexion">
@@ -65,11 +93,11 @@
                 <form role="form">
                     <div class="form-group">
                     <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
-                    <input type="email" class="form-control" name="email_log" id="email_log" placeholder="Entrer votre email">
+                    <input type="email" class="form-control" name="email_log" id="email_log" placeholder="Entrer votre email" required>
                     </div>
                     <div class="form-group">
                     <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                    <input type="password" class="form-control" name="psw_log" id="psw_log" placeholder="Enter password">
+                    <input type="password" class="form-control" name="psw_log" id="psw_log" placeholder="Enter password" required>
                     </div>
                     <div id="error_msg">
                         <p></p>
@@ -102,23 +130,30 @@
                 </div>
                 <div class="modal-body">
                 <form role="form">
+                <div class="form-group">
+                    <label for="name"><span class="glyphicon glyphicon-user"></span> Prénom</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Entrer votre prénom" required>
+                    </div>
                     <div class="form-group">
                     <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nom</label>
-                    <input type="text" class="form-control" id="usrname" placeholder="Entrer votre nom">
+                    <input type="text" class="form-control" id="usrname" placeholder="Entrer votre nom" required>
                     </div>
                     <div class="form-group">
-                    <label for="nickname"><span class="glyphicon glyphicon-user"></span> Prénom</label>
-                    <input type="text" class="form-control" id="nickname" placeholder="Entrer votre prénom">
+                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Adresse mail</label>
+                    <input type="email" class="form-control" id="email_inscrip" placeholder="Entrer votre adresse email" required>
                     </div>
                     <div class="form-group">
-                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Entrer votre mot de passe">
+                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Mot de passe</label>
+                    <input type="password" class="form-control" id="password1" placeholder="Entrer votre mot de passe" required>
                     </div>
                     <div class="form-group">
-                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Entrer votre adresse email ">
+                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Confirmer votre mot de passe</label>
+                    <input type="password" class="form-control" id="password2" placeholder="Confirmer votre mot de passe" required>
                     </div>
-                    <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> S'inscrire</button>
+                    <div id="error_msg1">
+                        <p></p>
+                    </div>
+                    <button type="submit" id="submit_inscrip" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> S'inscrire</button>
                 </form>
                 </div>
                 <div class="modal-footer">
@@ -146,8 +181,8 @@
                 <div class="modal-body">
                 <form role="form">
                     <div class="form-group">
-                    <label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    <label for="email"><span class="glyphicon glyphicon-user"></span> Entrer votre mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Entrer votre mail" required>
                     </div>
                     <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Envoyer votre demande</button>
                 </form>
