@@ -9,27 +9,39 @@ $(document).ready(function(){
         $("#firstname").val("");  
         $("#email_inscrip").val("");  
         $("#password1").val("");  
-        $("#password2").val("");          
+        $("#password2").val("");  
+        $("#error_msg1").val("");         
         $("#modalInscrip").modal();
     });
 
     // pour afficher la fenetre modale d'inscription
     $("#signUp").click(function(){
         $("#modalLogin").modal("hide");
+        // pour vider les champs
+        $("#usrname").val(""); 
+        $("#firstname").val("");  
+        $("#email_inscrip").val("");  
+        $("#password1").val("");  
+        $("#password2").val("");  
+        $("#error_msg1").val(""); 
         $("#modalInscrip").modal();
     });
 
     // pour afficher la fenetre modale de login
-    $("#login").click(function(){  
+    $("#login").click(function(){ 
+        //pour vider les champs 
         $("#email_log").val(""); 
-        $("#psw_log").val("");             
+        $("#psw_log").val(""); 
+        $("#error_msg").val("");            
         $("#modalLogin").modal();
     });
 
     // pour afficher la fenetre modale de mot de passe oublié
     $("#pass").click(function(){
         $("#modalLogin").modal("hide");
-        $("#email_forgot").val("");  
+        // pour vider les champs
+        $("#email_forgot").val(""); 
+        $("#error_msg2").val("");   
         $("#modalPass").modal("show");
     });
 
@@ -62,7 +74,8 @@ $(document).ready(function(){
             }   
         },
         'text'
-        );   
+        );  
+         
     });
 
     // pour valider le login
@@ -76,7 +89,8 @@ $(document).ready(function(){
              psw : $("#psw_log").val()
         },
         function(data){
-            if(data != 'Invalid'){ 
+            if(data != 'Invalid_Email' && data != 'Invalid_Password'){ 
+                // Login OK
                 $("#modalLogin").modal("hide");
                 $("#navbar_invite").css('display','none');
                 // pour découper la réponse 
@@ -100,10 +114,17 @@ $(document).ready(function(){
                     $("#navbar_admin").css('display','block');
                 }
 
-            }else{  
-                $("#error_msg").css('color','red'); 
-                $("#error_msg").html("<p>Votre email ou votre mot de passe est incorrect.</p>");
-                $("#modalLogin").modal("show");
+            }else{ 
+                if (data == 'Invalid_Email') {
+                    $("#error_msg").css('color','red'); 
+                    $("#error_msg").html("<p>Cet email n'existe pas dans l'application.</p>");
+                    $("#modalLogin").modal("show");
+                } else if (data == 'Invalid_Password') {
+                    $("#error_msg").css('color','red'); 
+                    $("#error_msg").html("<p>Votre mot de passe est incorrect.</p>");
+                    $("#modalLogin").modal("show");
+                }
+
             }       
         },
         'text'

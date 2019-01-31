@@ -28,21 +28,33 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
     }
 
-// verification si couple email/password existe dans la table Utilisateur
-$requete_pdo = $bdd->prepare("SELECT nom_Utilisateur, prenom_Utilisateur, status_Utilisateur FROM Utilisateur WHERE mail_Utilisateur = '$email' AND password_Utilisateur = '$psw'");
+
+// recupération du mot de passe pour le décrypté et le comparer à celui saisi
+
+// verification si couple email existe dans la table Utilisateur et récupération du mot de paase
+$requete_pdo = $bdd->prepare("SELECT nom_Utilisateur, prenom_Utilisateur, status_Utilisateur, password_Utilisateur FROM Utilisateur WHERE mail_Utilisateur = '$email'");
 $requete_pdo->execute();
 if(($requete_pdo->rowCount()) == 0){
-    //Si le résultat retourner par la fonction est égal à  0, alors le couple email/password n'a pas été trouvé. 
-    echo "Invalid";
+    //Si le résultat retourner par la fonction est égal à  0, alors l'email n'a pas été trouvé
+    echo "Invalid_Email";
 
 }
 else {
     $resultat = $requete_pdo->fetch();
-    session_start();
-    $_SESSION['prenom'] = $resultat['prenom_Utilisateur'];
-    $_SESSION['nom'] = $resultat['nom_Utilisateur'];
-    $_SESSION['status'] = $resultat['status_Utilisateur'];
-    echo $_SESSION['prenom'].'/'.$_SESSION['nom'].'/'.$_SESSION['status'];
+    // vérification du mot de passe 
+    $isPasswordCorrect = password_verify($psw, $resultat['password_Utilisateur']);
+    if ($isPasswordCorrect){
+        // mot de passe OK
+        session_start();
+        $_SESSION['prenom'] = $resultat['prenom_Utilisateur'];
+        $_SESSION['nom'] = $resultat['nom_Utilisateur'];
+        $_SESSION['status'] = $resultat['status_Utilisateur'];
+        echo $_SESSION['prenom'].'/'.$_SESSION['nom'].'/'.$_SESSION['status'];
+    }
+    else {
+        // mot de passe invalid
+        echo "Invalid_Password";
+    }
 }
 
 ?>

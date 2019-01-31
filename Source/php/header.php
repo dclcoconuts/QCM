@@ -228,7 +228,7 @@
                   </div>
                   <div class="modal-body">
                     <p>Vous aller recevoir un email pour</p>
-                    <p>retrouver votre mot de passe</p>
+                    <p>Réinitialiser votre mot de passe</p>
                     <p>Merci de votre visite</p>
                     <p>A bientôt.</p>
                   </div>

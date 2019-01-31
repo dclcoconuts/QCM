@@ -27,7 +27,7 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
     }
 
-// verification si couple email/password existe dans la table Utilisateur
+// verification si email existe dans la table Utilisateur
 $requete_pdo = $bdd->prepare("SELECT * FROM Utilisateur WHERE mail_Utilisateur = '$email'");
 $requete_pdo->execute();
 if(($requete_pdo->rowCount()) == 0){
@@ -36,6 +36,26 @@ if(($requete_pdo->rowCount()) == 0){
 
 }
 else {
+    $donnees = $requete_pdo->fetch();  
+    $prenom = $donnees['prenom_Utilisateur'];
+    $nom = $donnees['nom_Utilisateur'];
+    $msg = "Bonjour\t";
+    $msg .= "$prenom\t";
+    $msg .= "$nom,\n";
+    $msg .= "Pour réinitialiser votre mot de passe, ";
+    $msg .= "veuillez cliquer sur le lien suivant\t";
+    $msg .= 'http:\\';
+
+
+    $from = "test@domaine.com";
+    
+    $to = $email;
+   
+    $subject = "QCM";
+    
+    $headers = "From:" . $from;
+    
+    mail($to,$subject,$msg,$headers);
     echo "Success";
 }
 

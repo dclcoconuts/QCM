@@ -43,9 +43,28 @@ if(($requete_pdo->rowCount()) == 0){
     $requete_pdo = $bdd->prepare("INSERT INTO Utilisateur (nom_Utilisateur, prenom_utilisateur, dateInscript_Utilisateur, status_Utilisateur, password_Utilisateur, mail_Utilisateur) VALUES ('$usrname', '$firstname', CURDATE(), '1', '$psw1', '$email_inscrip')");
     $requete_pdo->execute();
     echo "Success";
+ 
+    $msg = "Bonjour\t";
+    $msg .= "$firstname\t";
+    $msg .= "$usrname,\n";
+    $msg .= "Votre inscription a bien été prise en compte, ";
+    $msg .= "bienvenue sur le site MesQCMs\t";
+ 
+    $from = "test@domaine.com";
+    
+    $to = $email_inscrip;
+   
+    $subject = "QCM";
+    
+    $headers = "From:" . $from;
+    
+    mail($to,$subject,$msg,$headers);
+    echo "Success";
 
 }
 else {
+    // email existe déjà dans la base de données
+    // creation impossible
     echo "Invalid";
 }
 

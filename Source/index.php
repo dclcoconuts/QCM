@@ -8,6 +8,7 @@
     <?php include('php/header.php'); ?>
     <main>
         <div class="accueil">
+            
         </div>
     </main>
 
