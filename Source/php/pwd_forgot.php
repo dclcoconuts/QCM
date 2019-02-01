@@ -7,7 +7,7 @@ $email = $_POST['email_forgot'];
 
 // connexion pdo à la base de données
 // utilisation d'un fichier Json pour récupérer les informations de connexion
-$file_json = file_get_contents('config.json');
+$file_json = file_get_contents("php/config.json");
 $parsed_json = json_decode($file_json, true);
 $servername = $parsed_json['servername'];
 $dbname = $parsed_json['dbname'];

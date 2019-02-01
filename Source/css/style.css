@@ -1,4 +1,7 @@
-
+@font-face {
+	font-family: "Brushot-Bold";
+	src: url('Brushot-Bold.ttf');
+}
 
 /* CSS pour fenetre modale de connexion */
 
@@ -7,7 +10,16 @@
     color:white !important;
     text-align: center;
     font-size: 30px;
+    padding-top: 30px;
   }
+
+#inscript{
+    margin-top: 24px;   
+}
+
+#login{
+    margin-top: 24px;     
+}
 
 .modal-footer {
     background-color: #f9f9f9;
@@ -15,18 +27,22 @@
 
 .navbar-header {
     background-color: #162d50ff;
+    height: 80px;
 }
 
 .navbar{
     background-color: #162d50ff;   
 }
 
-#navbar_connect{
-    display: none;
+.navbar-brand {
+    padding-top: 30px;
+    font-family: Brushot-Bold;
+    font-size: 2.5em;
+
 }
 
-#navbar_admin{
-    display: none;
+.navbar-toggle{
+    margin-top: 24px; 
 }
 
 .glyphicon{
@@ -51,4 +67,27 @@
 
 .logout{
     display: none;
+}
+
+.logo{
+    display: flex;
+    justify-content : center;
+    font-family: Brushot-Bold;
+    font-size : 6em;
+}
+
+#q{
+    color: orangered;
+}
+#c{
+    color:yellow;
+}
+#m{
+    color: brown;
+}
+
+h1{
+    font-family: Brushot-Bold;
+    font-size : 2em; 
+    color :#162d50ff; 
 }

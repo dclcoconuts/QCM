@@ -22,7 +22,8 @@ PRIMARY KEY (id_Categorie)) ENGINE=InnoDB;
 DROP TABLE IF EXISTS Questionnaire ;
 CREATE TABLE Questionnaire (id_Questionnaire INTEGER(4) AUTO_INCREMENT NOT NULL,
 nom_Questionnaire VARCHAR(255),
-date_Questionnaire DATE,
+date_Questionnaire TIMESTAMP,
+resume_Questionnaire VARCHAR(255),
 status_Questionnaire INTEGER(1),
 motifRefus_Questionnaire VARCHAR(255),
 id_Utilisateur INTEGER(3),

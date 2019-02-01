@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 // Script de gestion de la connexion utilisateur 
 // recuperation email et password en méthode POST 
@@ -8,7 +11,7 @@ $psw = $_POST['psw'];
 
 // connexion pdo à la base de données
 // utilisation d'un fichier Json pour récupérer les informations de connexion
-$file_json = file_get_contents('config.json');
+$file_json = file_get_contents("config.json");
 $parsed_json = json_decode($file_json, true);
 $servername = $parsed_json['servername'];
 $dbname = $parsed_json['dbname'];
@@ -28,7 +31,6 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
     }
 
-
 // recupération du mot de passe pour le décrypté et le comparer à celui saisi
 
 // verification si couple email existe dans la table Utilisateur et récupération du mot de paase
@@ -45,11 +47,10 @@ else {
     $isPasswordCorrect = password_verify($psw, $resultat['password_Utilisateur']);
     if ($isPasswordCorrect){
         // mot de passe OK
-        session_start();
         $_SESSION['prenom'] = $resultat['prenom_Utilisateur'];
         $_SESSION['nom'] = $resultat['nom_Utilisateur'];
         $_SESSION['status'] = $resultat['status_Utilisateur'];
-        echo $_SESSION['prenom'].'/'.$_SESSION['nom'].'/'.$_SESSION['status'];
+        echo "Success";
     }
     else {
         // mot de passe invalid

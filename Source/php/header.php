@@ -1,32 +1,38 @@
 <!-- Gestion du header de l'application et des connexions -->
-
 <header>
-<nav id="navbar_invite" class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">QCM</a>
+<?php
+if (empty($_SESSION['status'])) {
+  ?>
+  <nav id="navbar_invite" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.php">QCM</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><button type="button" class="glyphicon glyphicon-user" id="inscript"> S'INSCRIRE</button></li>
+          <li><button type="button" class="glyphicon glyphicon-log-in" id="login"> SE CONNECTER</button></li>
+      </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><button type="button" class="glyphicon glyphicon-user" id="inscript"> S'INSCRIRE</button></li>
-        <li><button type="button" class="glyphicon glyphicon-log-in" id="login"> SE CONNECTER</button></li>
-    </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
+<?php
+} else if ($_SESSION['status'] == 1){ 
+?>
+<!-- affichage menu Utilisateur connecté -->
 <nav id="navbar_connect" class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_connect">
-        <span class="glyphicon glyphicon-user"></span>  
+        <span class="glyphicon glyphicon-user" ></span>  
       </button>
-      <a class="navbar-brand" href="#">QCM</a>
+      <a class="navbar-brand" href="index.php">QCM</a>
     </div>
     <div class="collapse navbar-collapse" id="menu_connect">
       <ul class="nav navbar-nav navbar-right">
@@ -36,8 +42,8 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li id="user1"></li>
-            <li id="role1"></li>
+            <li id="user1"><?php echo $_SESSION['prenom']." ".$_SESSION['nom']?></li>
+            <li id="role1">Utilisateur</li>
             <li></li>
             <li><a href="#">Créer un QCM</a></li>
             <li><a href="#">Modifier un QCM</a></li>
@@ -50,24 +56,28 @@
   </div>
 </nav>
 
+<?php
+} else if ($_SESSION['status'] == 2){ 
+?>
+<!-- affichage du menu Administrateur -->
 <nav id="navbar_admin" class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_admin">
-        <span class="glyphicon glyphicon-user"></span>  
+        <span class="glyphicon glyphicon-user" style="color:green"></span>  
       </button>
-      <a class="navbar-brand" href="#">QCM</a>
+      <a class="navbar-brand" href="index.php">QCM</a>
     </div>
     <div class="collapse navbar-collapse" id="menu_admin">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">          
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-            <span class="glyphicon glyphicon-user"></span>
+            <span class="glyphicon glyphicon-user" style="color:green"></span>
             <span class="caret"></span>
           </a> 
           <ul class="dropdown-menu">
-            <li id="user2"></li>
-            <li id="role2"></li>
+            <li id="user2"><?php echo $_SESSION['prenom']." ".$_SESSION['nom']?></li>
+            <li id="role2">Administrateur</li>
             <li><a href="#">Créer un QCM</a></li>
             <li><a href="#">Modifier un QCM</a></li>
             <li><a href="#">Gérer mes QCMs</a></li>
@@ -79,6 +89,10 @@
     </div>
   </div>
 </nav>
+
+<?php
+}
+?>
 
        <!--  fenetre modale de connexion -->
        <div class="connexion">
@@ -259,10 +273,6 @@
             </div>
           </div>
         </div>   
-
-<script>
-
-
-</script> 
 </header>
+
 

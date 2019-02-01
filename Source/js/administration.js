@@ -48,9 +48,11 @@ $(document).ready(function(){
     // pour gérer la deconnexion
     $(".deconnection").click(function(){
         $("#logout").modal("show");      
-        $("#navbar_connect").css('display','none');
-        $("#navbar_admin").css('display','none');
+        // $("#navbar_connect").css('display','none');
+        // $("#navbar_admin").css('display','none');
         $("#navbar_invite").css('display','block');
+        $.post('php/deconnexion.php');
+        location.assign('./index.php');
     });
    
     // pour gérer mot de passe oublié
@@ -93,28 +95,9 @@ $(document).ready(function(){
                 // Login OK
                 $("#modalLogin").modal("hide");
                 $("#navbar_invite").css('display','none');
-                // pour découper la réponse 
-                tab = data.split("/");
-
-                // affiche le role de l'utilisateur (1=Utilisateur, 2=Administrateur)
-                if (tab[2] == "1")
-                { 
-                    // affiche le nom de l'utilisateur dans le menu
-                    $("#user1").html(tab[0]+" "+tab[1]);
-                    $("#role1").html("Utilisateur");  
-                    $("#navbar_admin").css('display','none');
-                    $("#navbar_connect").css('display','block');   
-                }
-                else if (tab[2] == "2")
-                {
-                    // affiche le nom de l'utilisateur dans le menu
-                    $("#user2").html(tab[0]+" "+tab[1]);
-                    $("#role2").html("Administrateur");
-                    $("#navbar_connect").css('display','none');
-                    $("#navbar_admin").css('display','block');
-                }
-
-            }else{ 
+                // pour recharger le menu
+                location.reload();
+            } else { 
                 if (data == 'Invalid_Email') {
                     $("#error_msg").css('color','red'); 
                     $("#error_msg").html("<p>Cet email n'existe pas dans l'application.</p>");
@@ -128,7 +111,8 @@ $(document).ready(function(){
             }       
         },
         'text'
-        );   
+        );  
+
     });
 
     // pour valider l'inscription  

@@ -12,8 +12,9 @@ $email_inscrip = $_POST['email_inscrip'];
 $psw1 = password_hash($_POST['psw1'], PASSWORD_DEFAULT);
 
 // connexion pdo à la base de données
+// connexion pdo à la base de données
 // utilisation d'un fichier Json pour récupérer les informations de connexion
-$file_json = file_get_contents('config.json');
+$file_json = file_get_contents("config.json");
 $parsed_json = json_decode($file_json, true);
 $servername = $parsed_json['servername'];
 $dbname = $parsed_json['dbname'];
